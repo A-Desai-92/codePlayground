@@ -1,0 +1,45 @@
+#----------------------------------------------A
+print('Welcome to Astha\'s Calculator')
+print('Part A - Add two numbers')
+print('The sum is %.1f' %(float(input('Enter first number: '))+float(input('Enter second number: '))))
+
+#----------------------------------------------B
+def partB():
+  print('Part B - Add, Subtract or Multiply two numbers')
+
+#Define Functions
+def add(num1, num2):
+  ans = num1 + num2
+  return ans
+def subtract(num1, num2):
+  ans = num1 - num2
+  return ans
+def multiply(num1, num2):
+  ans = num1 * num2
+  return ans  
+  
+#Numbers and function input by user
+num1 = input('Enter first number: ')
+num2 = input('Enter second number: ')
+func1 = raw_input("Enter Add,Subtract or Multiply: ")
+
+#Function Execution
+if func1 in ["add", "Add", "+"]:
+  ans = add(num1, num2)
+  print(ans)
+if func1 in ["subtract", "Subtract", "-"]:
+  ans = subtract(num1, num2)
+  print(ans)
+if func1 in ["multiply", "Multiply", "*"]:
+  ans = multiply(num1, num2)
+  print(ans)
+
+while True:
+  again = input("Sweet ! Would you like to try again?")
+
+if again.lower().startswith("y"):
+   partB ()
+
+elif again.lower().startswith("n"):
+    print("See you later!")
+    exit()
